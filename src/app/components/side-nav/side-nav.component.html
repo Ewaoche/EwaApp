@@ -1,0 +1,9 @@
+<nav [class.is-closed] = "isClosed">
+    <ul>
+        <li id="logo"><span>close</span> <i *ngIf="!isClosed"  class="fa fa-chevron-left" (click)="closeMenu()"></i></li>
+        <li><i class="fas fa-search"(click)="openMenu()"></i></li>
+        <li><i class="fab fa-html5"(click)="openMenu()"></i></li>
+        <li><i class="fab fa-css3" (click)="openMenu()"></i></li>
+        <li ><i class="fab fa-js"(click)="openMenu()"></i></li>
+    </ul>
+</nav>

@@ -1,0 +1,38 @@
+
+$background-color: #5e5858;
+$color:#e7e7f0;
+
+
+footer{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap:20px;
+  align-items: center;
+  justify-content:end;
+  background-color: $background-color;
+  color: $color;
+  padding: 0 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+ 
+
+
+#social-media{
+  display: grid;
+  grid-gap:10px;
+  grid-template-columns: auto auto auto;
+
+  a{
+   border-bottom: 3px solid transparent;
+   display: inline-block;
+
+   &:hover{
+     border-bottom: 3px solid white;
+   }
+  }
+
+}
+
+
+}
