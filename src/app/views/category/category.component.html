@@ -1,0 +1,25 @@
+<header>
+    <i [ngClass]="[category.iconClasses, category.id]"></i>
+    <h1>{{category.title}}</h1>
+    <p>{{category.description}}</p>
+</header>
+
+    <div id="topics">
+        <app-resources></app-resources>
+          <div id="options">
+            <app-topic 
+               *ngFor="let topic of category.topics" [topic]="topic">
+            </app-topic>  
+          </div>
+     </div>
+    
+     <!-- <div style="height:3000px">
+        <h1>Hollo</h1>
+    </div> -->
+   <app-card [iconClasses]="'fas fa-book'"[title]="'Recommended Books'">
+     <div id="books">
+      <app-book></app-book>
+      <app-book></app-book>
+     </div>  
+  </app-card>
+ 

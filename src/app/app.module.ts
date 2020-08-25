@@ -1,34 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { AppRoutingModule} from './app-routing.module';
 import { NgModule } from '@angular/core';
-// import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {FormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
-import {FooterComponent} from './components/footer/footer.component';
-import {SideNavComponent} from './components/side-nav/side-nav.component';
-import { RouterModule } from '@angular/router';
-import { appRoutes } from './routes';
-
+import { FooterComponent } from './components/footer/footer.component';
+import { SideNavComponent } from './components/side-nav/side-nav.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import { SharedModule } from './shared/shared.module';
+import { AlertService } from './components/alert/services/alert/alert.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     SideNavComponent
-   
-   
   ],
   imports: [
     BrowserModule,
-    // AppRoutingModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    HttpClientModule,
-    RouterModule.forRoot(appRoutes)
-  
+    AppRoutingModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    SharedModule
   ],
-  providers: [],
-  bootstrap: [AppComponent] 
+  providers: [AlertService],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

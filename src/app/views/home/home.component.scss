@@ -4,6 +4,7 @@
     width: 100%;
     justify-items: center;
     display: grid;
+    cursor: pointer;
     h1{
         color: #fff;
         align-self: end;
@@ -24,7 +25,7 @@
                  }
         
               &.fa-css3{
-                color: #26f11f;
+                color: #1f46f1;
                 }
         
               &.fa-js{

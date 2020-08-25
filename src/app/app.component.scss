@@ -8,8 +8,14 @@ grid-template-areas:
 app-side-nav
 {
     grid-area: side-nav;
+    height: 100vh;
+    
+   
 }
 main
 {
     grid-area: main;
+    padding: 20px 30px;
+    margin-bottom: 70px;
 }
+

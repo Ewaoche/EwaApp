@@ -1,0 +1,10 @@
+
+<div id="modal-content-container" [class.is-hidden]="isHidden">
+    <span id="close" (click)="close()"><i class="fas fa-times"></i></span>
+
+    <div id="content">
+        <ng-content></ng-content>
+    </div>
+</div>
+
+<div id="modal-overlay"></div>

@@ -1,12 +1,16 @@
-$background-color: #413e3e;
-$aside-padding:12px;
+@import 'src/styles/mixins';
+@import 'src/styles/variables';
+
+
+$aside-padding:15px;
 nav{
-   
+    display: grid;
     height: 100vh;
     align-content:baseline;
-     background-color:$background-color;
-     color: blanchedalmond;
+     background-color:$secondary-background;
+     color: #929293;
      width: 300px;
+     
 
      &.is-closed {
       width: 50px;
@@ -16,17 +20,48 @@ nav{
     ul{
       display: grid;
       grid-gap:10px;
-      padding-left: $aside-padding;
     li{
+      padding-left: $aside-padding;
+      display: grid;
+      grid-template-columns: 30px 1fr;
+      align-items: center;
+      padding-bottom: 5px;
+      padding-top: 5px;
 
+      &:not(#logo){
+        &:hover{
+          background-color: $blue;
+          transition: background-color .3s;
+        }
+      }
+    
+      &.active-route{
+        background-color: $blue;
+
+        span{
+          color: white;
+        }
+        
+
+      }
+     
       &#logo{ 
-        display: grid;
+       display: grid;
        grid-template-columns: auto 1fr;
        align-items: center;
+       grid-gap: 5px;
 
-       span{
-         display: block;
-       }
+       img{
+        width: 25px;
+        display: block;
+        cursor: pointer;
+      }
+
+         
+         &.is-closed{
+           display: none;
+         }
+      
 
         i{
           padding-right:$aside-padding;
@@ -42,15 +77,38 @@ nav{
          }
 
         &.fa-html5{
-        color: #ff073a;
-         }
+        color: $html;
 
-      &.fa-css3{
-        color: #26f11f;
+        &.active-route{
+          color: white;
+        }
+      }
+
+      &.fa-css3-alt{
+        color: $css;
+        &.active-route{
+          color: white;
+        }
         }
 
       &.fa-js{
-        color: #f523ea;
+        font-size: 26px;
+        // color: $javascript;
+        color: $yellow;
+        
+        &.active-route{
+          color: white;
+        }
+
+        }
+
+      }
+
+      span{
+        display: block;
+
+        &.is-closed{
+          display: none;
         }
       }
         

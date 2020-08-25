@@ -1,0 +1,33 @@
+@import 'src/styles/variables';
+
+nav{
+    display: grid;
+    grid-template-columns: 1fr;
+    
+    h3{
+        background-color: $secondary-background;
+        color: #fff;
+        height: 75px;
+        align-items: center;
+        justify-items: center;
+        display: grid;
+        margin-bottom: 0;
+        margin-top: 0;
+       
+    }
+
+
+ul{
+    margin-top: 0;
+    background-color: $secondary-background;
+    
+
+   li{
+      color: $green;
+     padding: 15px 0;
+     text-align: center;
+   }
+
+}
+
+}

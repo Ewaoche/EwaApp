@@ -1,18 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 @import "@fortawesome/fontawesome-free/css/all.css";
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import 'src/styles/variables';
 
-
-:root{
-    --background:#1e1e1e;
-}
 *{
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: $light-gray;
+    
+}
+h1,
+h2,
+h3,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Roboto', sans-serif;
 }
 
 body{
     margin: 0;
-    padding: 0;
-    background: var(--background);
+    background: $black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    
+
  
 }
 a{
@@ -24,5 +37,16 @@ ul{
     list-style: none;
 
     padding-left:0;
+    cursor: pointer;
 }
+
+hr{
+    width: 100%;
+    border-color: $tertiary-background;
+    background-color: $tertiary-background;
+}
+
+
+
+//side nav
 

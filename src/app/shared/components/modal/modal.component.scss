@@ -1,0 +1,23 @@
+@import 'src/styles/variables';
+
+#modal-content-container{
+    min-width: 300px;
+    display: grid;
+    max-height: 75vh;
+    background-color: $secondary-background;
+    padding: 10px;
+    border: 1px solid white;
+
+    &.is-hidden{
+        display: none;
+    }
+
+    #close{
+       justify-self: end;
+
+       i:hover{
+        color: white;
+       }
+      
+    }
+}

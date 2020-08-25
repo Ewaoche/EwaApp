@@ -1,0 +1,25 @@
+<article>
+    <div id="book-content">
+        <img [src]="book.imageUrl" [alt]="book.title">
+
+        <div id="information">
+          <h3>Clean Code</h3>
+          <p>Lorem ipsum dolor sit amet consectetur,
+               adipisicing elit.
+               Natus totam saepe autem eius 
+               Natus totam saepe autem eius 
+              voluptatum ab magnam architecto reprehenderit maiores vitae.</p>
+        </div>
+      </div>
+      <div id="book-details">
+        <hr>
+        <div id="rating">
+         <div id="buy">
+           <i class="fas fa-info-circle"></i>Details
+        </div>
+        <div id="stars">
+          <app-star-list [rating]="this.book.rating"></app-star-list>
+        </div>
+        </div>
+      </div>
+</article>

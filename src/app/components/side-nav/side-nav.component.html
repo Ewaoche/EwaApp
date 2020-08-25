@@ -1,9 +1,21 @@
-<nav [class.is-closed] = "isClosed">
-    <ul>
-        <li id="logo"><span>close</span> <i *ngIf="!isClosed"  class="fa fa-chevron-left" (click)="closeMenu()"></i></li>
-        <li><i class="fas fa-search"(click)="openMenu()"></i></li>
-        <li><i class="fab fa-html5"(click)="openMenu()"></i></li>
-        <li><i class="fab fa-css3" (click)="openMenu()"></i></li>
-        <li ><i class="fab fa-js"(click)="openMenu()"></i></li>
-    </ul>
+<nav [class.is-closed]="isclosed">
+  <ul>
+      <li id="logo">
+        <img src="assets/icons/icon-72x72.png" alt="" [routerLink]="['']">
+        <i *ngIf="!isclosed" class="fas fa-chevron-left" (click)="closeMenu()" ></i>
+      </li>
+      <li (click)="openMenu()" [routerLinkActive]="'active-route'" [routerLink]="['category/html']">
+        <i class="fab fa-html5 fa-2x" [routerLinkActive]="'active-route'"></i>
+        <span [class.is-closed]="isclosed">HTML</span>
+      </li>
+      
+      <li (click)="openMenu()" [routerLinkActive]="'active-route'" [routerLink]="['category/CSS']" >
+        <i class="fab fa-css3-alt"[routerLinkActive]="'active-route'" ></i>
+        <span [class.is-closed]="isclosed">CSS</span>
+      </li>
+      <li (click)="openMenu()" [routerLinkActive]="'active-route'"  [routerLink]="['category/javascript']">
+        <i class="fab fa-js fa-2x"[routerLinkActive]="'active-route'" ></i>
+         <span [class.is-closed]="isclosed"> Javascript</span>
+      </li>
+  </ul>  
 </nav>

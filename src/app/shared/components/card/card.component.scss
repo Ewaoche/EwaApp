@@ -1,0 +1,16 @@
+@import 'src/styles/variables';
+$padding:20px;
+section{
+    display: block;
+    background-color: $background-color;
+
+    h2{
+        color: white;
+        padding: $padding;
+        padding-bottom: 0;
+    }
+    #card-body{
+        padding: $padding;
+
+    }
+}

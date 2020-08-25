@@ -1,5 +1,6 @@
-
-$background-color: #5e5858;
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+$background-color: $background-color;
 $color:#e7e7f0;
 
 
@@ -11,10 +12,10 @@ footer{
   justify-content:end;
   background-color: $background-color;
   color: $color;
-  padding: 0 20px;
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
+  padding: 0 20px;
  
 
 
@@ -28,7 +29,7 @@ footer{
    display: inline-block;
 
    &:hover{
-     border-bottom: 3px solid white;
+    @include auto-mix;
    }
   }
 
